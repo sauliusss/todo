@@ -5,7 +5,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Checkbox from "@mui/material/Checkbox";
 import IconButton from "@mui/material/IconButton";
 import CommentIcon from "@mui/icons-material/Comment";
-export default function TodoItem({ todo, removeTodo }) {
+export default function TodoItem({ todo, removeTodo, toggle }) {
   const labelId = `checkbox-list-label-${todo.id}`;
 
   return (
@@ -19,7 +19,7 @@ export default function TodoItem({ todo, removeTodo }) {
     >
       <ListItemButton role={undefined} dense>
         <ListItemIcon>
-          <Checkbox edge="start" checked={todo.completed} tabIndex={-1} disableRipple inputProps={{ "aria-labelledby": labelId }} />
+          <Checkbox edge="start" checked={todo.completed} tabIndex={-1} disableRipple inputProps={{ "aria-labelledby": labelId }} onChange={toggle} />
         </ListItemIcon>
         <ListItemText id={labelId} primary={`Line item ${todo.text}`} />
       </ListItemButton>
