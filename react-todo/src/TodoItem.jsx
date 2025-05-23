@@ -21,7 +21,7 @@ export default function TodoItem({ todo, removeTodo, toggle }) {
         <ListItemIcon>
           <Checkbox edge="start" checked={todo.completed} tabIndex={-1} disableRipple inputProps={{ "aria-labelledby": labelId }} onChange={toggle} />
         </ListItemIcon>
-        <ListItemText id={labelId} primary={`Line item ${todo.text}`} />
+        <ListItemText id={labelId} primary={`${todo.text}`} />
       </ListItemButton>
     </ListItem>
   );
