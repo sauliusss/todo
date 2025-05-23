@@ -5,14 +5,13 @@ import CSSBaseline from "@mui/material/CssBaseline";
 import "./App.css";
 import CssBaseline from "@mui/material/CssBaseline";
 import TodoList from "./todolist";
+import Navbar from "./Navbar";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <CssBaseline />
-      <h1>TO-DO</h1>
+      <Navbar />
       <TodoList />
     </>
   );
